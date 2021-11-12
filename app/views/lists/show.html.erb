@@ -1,5 +1,9 @@
 <h2><%= @list.name %></h2>
 <p>List of movies should display here</p>
-
+<ul class="list-group">
+  <% @lists.each do |list| %>
+    <div class="item card-category" >
+      <li class="list-group-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path("san_francisco.jpg") %>)"> <%= list.name %></li>
+    </div>
+  <% end %>
 <%= link_to "Add Bookmark" %>
-<%= cl_image_tag("bll7gqrpmm4jzxmtrtwa",width: 400, height: 300, crop: :fill) %>
