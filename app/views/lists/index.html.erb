@@ -1,7 +1,9 @@
 <h1>Lists of Movies</h1>
 <ul class="list-group">
   <% @lists.each do |list| %>
-    <li class="list-group-item"> <%= list.name %></li>
+    <div class="item card-category" >
+      <li class="list-group-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path("san_francisco.jpg") %>)"> <%= list.name %></li>
+    </div>
   <% end %>
   <%= link_to 'New List', new_list_path(@list), Class: "btn btn-primary" %>
 </ul>
