@@ -6,16 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
-
-Movie.destroy_all
+puts "Cleaning database..."
+Bookmark.destroy_all
 List.destroy_all
+Movie.destroy_all
+
 
 # the Le Wagon copy of the API
 url = 'http://tmdb.lewagon.com/movie/top_rated'
 response = JSON.parse(URI.open(url).read)
 
 response['results'].each do |movie_hash|
-  puts
+  puts "Creating restaurants..."
   p movie_hash
   # create an instance with the hash
   Movie.create!(
