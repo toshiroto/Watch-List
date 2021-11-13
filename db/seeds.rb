@@ -17,7 +17,7 @@ url = 'http://tmdb.lewagon.com/movie/top_rated'
 response = JSON.parse(URI.open(url).read)
 
 response['results'].each do |movie_hash|
-  puts "Creating restaurants..."
+  puts "Creating movies..."
   p movie_hash
   # create an instance with the hash
   Movie.create!(

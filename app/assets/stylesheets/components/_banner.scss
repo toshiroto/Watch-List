@@ -1,0 +1,26 @@
+.banner {
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("background-home.jpg");
+  background-size: cover;
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+  }
+  p {
+    color: white;
+    opacity: .8;
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 25px;
+  }
+  .btn {
+    padding: 15px 20px;
+    margin-bottom: 0px;
+  }
+}

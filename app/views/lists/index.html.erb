@@ -1,9 +1,26 @@
-<h1>Lists of Movies</h1>
-<ul class="list-group">
-  <% @lists.each do |list| %>
-    <div class="item card-category" >
-      <li class="list-group-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path("san_francisco.jpg") %>)"> <%= list.name %></li>
-    </div>
-  <% end %>
-  <%= link_to 'New List', new_list_path(@list), Class: "btn btn-primary" %>
-</ul>
+<%= render "shared/navbar" %>
+<div class="banner">
+  <div class="banner-content">
+      <h1>The randomest movie selection</h1>
+      <p>Le Wagon 727</p>
+      <ul class="list-group">
+        <% @lists.each do |list| %>
+          <div class="item card-category" >
+            <li class="list-group-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path("san_francisco.jpg") %>)"> <%= list.name %></li>
+          </div>
+        <% end %>
+      </ul>
+  </div>
+</div>
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url(banana-love.jpg)">
+    Banana Movies
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Anime
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+    Awesome Movies
+</div>
