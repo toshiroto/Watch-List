@@ -3,9 +3,13 @@
 <% @list.movies.each do |movie|   %>
   <%= movie.title %>
 <% end %>
-<%= link_to "New Bookmark" %>
+
+<%= link_to "New Bookmark", new_list_bookmark_path(@list) %>
 <ul>
   <li><%= link_to "Destroy", bookmark_path(@list),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
+
+
+|
