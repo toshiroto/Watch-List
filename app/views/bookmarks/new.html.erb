@@ -1,7 +1,7 @@
 <div class="container" mt-3>
   <h1>Bookmark</h1>
   <%= simple_form_for [@list, @bookmark]  do |f| %>
-  <%= f.association :movie, collection: @movies, include_blank: false %>
+  <%= f.association :movie %>
   <%= f.input :comment %>
   <%= f.submit "New Bookmark", class: "btn btn-primary" %>
   <% end %>
