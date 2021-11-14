@@ -1,14 +1,22 @@
-<h2><%= @list.name %></h2>
-<p>List of movies should display here</p>
+<%= render "shared/navbar" %>
+<div class="banner">
+  <div class="banner-content">
+      <h1><%= @list.name %></h1>
+      <p>List of movies</p>
+  </div>
+</div>
+<div class="cards">
 <% @list.movies.each do |movie|   %>
-  <%= movie.title %>
-<% end %>
+   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= movie.poster_url %>)">
+    <%= movie.title %></div>
+  <% end %>
+</div>
 
-<%= link_to "New Bookmark", new_list_bookmark_path(@list) %>
+
 <ul>
-  <li><%= link_to "Destroy", bookmark_path(@list),
+  <%= link_to "Destroy", bookmark_path(@list),
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
+                  data: { confirm: "Are you sure?" } %>
 </ul>
 
 

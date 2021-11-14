@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-
+attr_accessor :index
   def index
     @lists = List.all
   end

@@ -1,9 +1,6 @@
-<div class="navbar-lewagon"></div>
 <div class="banner">
   <div class="banner-content">
-    <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "New List", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "New List", class: "btn btn-gradient" %>
+      <% end %>

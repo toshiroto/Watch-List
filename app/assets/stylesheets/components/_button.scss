@@ -3,14 +3,17 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: normal;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(#e41eb2, #970fc4);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #b50fc4;
   width: 120px;
   flex-basis: auto;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
+  background: transparent;
+  border: transparent;
+  color: #f8a9ff;
+  font-weight: bold;
+
 }
