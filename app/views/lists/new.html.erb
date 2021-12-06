@@ -1,6 +1,9 @@
+<%= render "shared/navbar" %>
 <div class="banner">
   <div class="banner-content">
       <%= simple_form_for @list do |f| %>
         <%= f.input :name %>
         <%= f.submit "New List", class: "btn btn-gradient" %>
       <% end %>
+  </div>
+</div>
