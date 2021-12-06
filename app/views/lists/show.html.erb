@@ -1,23 +1,26 @@
 <%= render "shared/navbar" %>
 <div class="banner">
   <div class="banner-content">
-      <h1><%= @list.name %></h1>
-      <p>List of movies</p>
+    <h1><%= @list.name %></h1>
+    <p>List of movies</p>
   </div>
 </div>
-<div class="cards">
-<% @list.movies.each do |movie|   %>
-   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= movie.poster_url %>)">
-    <%= movie.title %></div>
-  <% end %>
-</div>
-
-
-<ul>
-  <%= link_to "Destroy", bookmark_path(@list),
+<div class="movielists">
+<div class="d-flex justify-content-between">
+  <ul>
+    <%= link_to "Delete", bookmark_path(@list),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
-</ul>
-
-
+  </ul>
+  <ul>
+  <%= link_to "New Bookmark", new_list_bookmark_path(@list) %>
+  </ul>
+</div>
+</div>
+<div class="cards">
+  <% @list.movies.each do |movie|   %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= movie.poster_url %>)">
+      <%= movie.title %></div>
+  <% end %>
+</div>
 |
