@@ -1,4 +1,4 @@
-class BookmarksController < ApplicationController
+class BookmarksController < ApplicationController::Base
   def new
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new

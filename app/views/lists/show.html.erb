@@ -6,20 +6,24 @@
   </div>
 </div>
 <div class="movielists">
-<div class="d-flex justify-content-between">
-  <ul>
-    <%= link_to "Delete", bookmark_path(@list),
+  <div class="d-flex justify-content-between">
+    <ul>
+      <%= link_to "Delete", bookmark_path(@list),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
-  </ul>
-  <ul>
-  <%= link_to "New Bookmark", new_list_bookmark_path(@list) %>
-  </ul>
-</div>
+    </ul>
+    <ul>
+      <%= link_to "New Bookmark", new_list_bookmark_path(@list) %>
+    </ul>
+  </div>
 </div>
 <div class="cards">
   <% @list.movies.each do |movie|   %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= movie.poster_url %>)">
+    <div class="card-category"
+    style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= movie.poster_url %>)">
+      <%= link_to bookmark_path(@list) do %>
+        <div><i class="far fa-trash-alt"></i></div>
+      <% end %>
       <%= movie.title %></div>
   <% end %>
 </div>
