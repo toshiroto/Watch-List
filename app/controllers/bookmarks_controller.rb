@@ -1,10 +1,10 @@
-class BookmarksController < ApplicationController::Base
+class BookmarksController < ApplicationController
   def new
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
   end
 
-  def creategit 
+  def creategit
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = @list

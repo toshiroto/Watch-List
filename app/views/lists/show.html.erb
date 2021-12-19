@@ -18,7 +18,7 @@
   </div>
 </div>
 <div class="cards">
-  <% @list.movies.each do |movie|   %>
+  <% @list.movies.each do |movie| %>
     <div class="card-category"
     style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= movie.poster_url %>)">
       <%= link_to bookmark_path(@list) do %>

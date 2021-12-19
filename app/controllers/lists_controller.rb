@@ -1,4 +1,4 @@
-class ListsController < ApplicationController::Base
+class ListsController < ApplicationController
   attr_accessor :index
 
   def index
