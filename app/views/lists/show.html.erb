@@ -22,7 +22,6 @@
     <div class="card-category"
     style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= movie.poster_url %>)">
       <%= link_to bookmark_path(@list) do %>
-        <div><i class="far fa-trash-alt"></i></div>
       <% end %>
       <h2><%= movie.title %> </h2>
     </div>
