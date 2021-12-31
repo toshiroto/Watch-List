@@ -22,8 +22,12 @@
   border-radius: 5px;
   filter: drop-shadow(2px 4px 8px #585858);
   margin: 5px 25px;
-}
 
+  .far {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 }
 
 // Smallest device
